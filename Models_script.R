@@ -1,7 +1,7 @@
-# Scott Schumackers
+# Scott Schumacker
 # Tidymodels Introduction
 
-# Building a model
+################## Building a model #####################
 
 # Loading packages
 library(tidymodels)
@@ -54,7 +54,8 @@ new_points <- expand.grid(initial_volume = 20,
 
 mean_pred <- predict(lm_fit, new_data = new_points)
 mean_pred
-####################################################
+
+#### Using Bayesian Anaylsis method ####
 
 # set the prior distribution
 library(rstanarm)
@@ -77,3 +78,5 @@ bayes_fit <-
 print(bayes_fit, digits = 5)
 
 tidy(bayes_fit, conf.int = TRUE)
+
+############################ Pre processing Data ######################
